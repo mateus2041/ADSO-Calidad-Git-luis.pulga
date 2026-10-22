@@ -47,4 +47,5 @@ def main():
             print("Opcion invalida, ingrese s o n")
 
 
-
+if __name__ == "__main__":
+    main()
