@@ -4,28 +4,11 @@ import math
 
 
 def main():
-<<<<<<< HEAD
     print("=== CALCULADORA SENA ===")
     try:
         a = float(input("Numero 1: "))
         b = float(input("Numero 2: "))
         op = input("Operacion (+,-,*,/): ").strip().lower()
-=======
-    while True:
-        print("=== CALCULADORA SENA ===")
-        try:
-            a = float(input("Numero 1: "))
-            b = float(input("Numero 2: "))
-        except ValueError:
-            print("ERROR: debe ingresar numeros")
-            continue
-
-        if not math.isfinite(a) or not math.isfinite(b):
-            print("ERROR: ingrese numeros finitos")
-            continue
-
-        op = input("Operacion (+,-,*,/): ").strip()
->>>>>>> feat/cambios-mateus-pr
         if op == "+":
             resultado = a + b
         elif op == "-":
