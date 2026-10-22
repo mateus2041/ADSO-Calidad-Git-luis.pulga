@@ -1,5 +1,6 @@
-# modulo_calculadora.py - Código espagueti (NIVEL CALAMIDAD 🍝)
+# calculadora_basica.py - Codigo espagueti (NIVEL CALAMIDAD)
 import sys
+
 
 def main():
     print("=== CALCULADORA SENA ===")
@@ -16,23 +17,24 @@ def main():
         elif op == "/":
             if b == 0:
                 print("ERROR: Division por cero")
-                main()  # 🍝 llamada recursiva como "goto"
+                main()  # llamada recursiva como "goto"
             else:
                 print("Resultado:", a / b)
         else:
             print("Operacion no valida")
-            main()  # 🍝 otra vez goto disfrazado
+            main()
     except ValueError:
         print("ERROR: debe ingresar numeros")
-        main()  # 🍝 y otra...
+        main()
 
     fin = input("Otra operacion? (s/n): ")
     if fin == "s":
-        main()  # 🍝 ciclo infinito recursivo que revienta la pila
+        main()  # ciclo infinito recursivo
     elif fin == "n":
         sys.exit()
     else:
         print("Opcion invalida, cerrando...")
         sys.exit()
 
-main()  # 🍝 ejecucion directa sin if __name__ == '__main__'
+
+main()  # ejecucion directa sin if __name__ == '__main__'
