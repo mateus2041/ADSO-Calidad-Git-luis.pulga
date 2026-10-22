@@ -12,6 +12,7 @@ def main():
         except ValueError:
             print("ERROR: debe ingresar numeros")
             continue
+
         if not math.isfinite(a) or not math.isfinite(b):
             print("ERROR: ingrese numeros finitos")
             continue
@@ -30,6 +31,10 @@ def main():
             resultado = a / b
         else:
             print("Operacion no valida")
+            continue
+
+        if not math.isfinite(resultado):
+            print("ERROR: resultado fuera de rango")
             continue
 
         print("Resultado:", resultado)
