@@ -6,7 +6,7 @@ def main():
     try:
         a = float(input("Numero 1: "))
         b = float(input("Numero 2: "))
-        op = input("Operacion (+,-,*,/): ")
+        op = input("Operacion (+,-,*,/): ").strip().lower()
         if op == "+":
             print("Resultado:", a + b)
         elif op == "-":
