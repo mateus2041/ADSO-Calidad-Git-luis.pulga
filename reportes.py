@@ -51,7 +51,7 @@ def generar_graficos(datos, ruta="grafico.svg"):
     minimo = min(0, min(datos))
     maximo = max(0, max(datos))
     if minimo == maximo:
-        maximo = minimo + 1
+        minimo, maximo = -1, 1
 
     escala = alto_grafico / (maximo - minimo)
     base_y = margen_superior + maximo * escala
