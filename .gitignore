@@ -1,0 +1,29 @@
+# Logs
+*.log
+logs/
+
+# Variables de entorno (seguridad)
+.env
+.env.local
+*.env
+
+# Binarios y ejecutables
+*.exe
+*.dll
+*.so
+*.class
+*.jar
+
+# Entornos virtuales
+venv/
+node_modules/
+
+# Archivos del IDE / editor
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+__pycache__/
