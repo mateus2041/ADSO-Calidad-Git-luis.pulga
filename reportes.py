@@ -28,10 +28,20 @@ def generar_reporte(titulo, datos):
 
 def generar_graficos(datos, ruta="grafico.svg"):
     """Genera un grafico de barras SVG para una lista de numeros finitos."""
-    if (not isinstance(datos, (list, tuple)) or not datos
-            or any(isinstance(valor, bool)
-                   or not isinstance(valor, (int, float))
-                   or not math.isfinite(valor) for valor in datos)):
+    if not isinstance(datos, (list, tuple)) or not datos:
+        print("ERROR: se requiere una lista de numeros finitos para el grafico")
+        return False
+
+    try:
+        valores_validos = all(
+            not isinstance(valor, bool)
+            and isinstance(valor, (int, float))
+            and math.isfinite(valor)
+            for valor in datos
+        )
+    except OverflowError:
+        valores_validos = False
+    if not valores_validos:
         print("ERROR: se requiere una lista de numeros finitos para el grafico")
         return False
 
