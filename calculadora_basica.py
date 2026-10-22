@@ -1,3 +1,8 @@
+# calculadora_basica.py - Calculadora basica
+
+import math
+
+
 def main():
     while True:
         print("=== CALCULADORA SENA ===")
@@ -6,6 +11,9 @@ def main():
             b = float(input("Numero 2: "))
         except ValueError:
             print("ERROR: debe ingresar numeros")
+            continue
+        if not math.isfinite(a) or not math.isfinite(b):
+            print("ERROR: ingrese numeros finitos")
             continue
 
         op = input("Operacion (+,-,*,/): ").strip()
